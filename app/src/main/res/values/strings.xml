@@ -7,6 +7,6 @@
     <string name="goal_button_text">Goal</string>
     <string name="yellowCard_button_text">Yellow Card</string>
     <string name="redCard_button_text">Red Card</string>
-    <string name="corner_button_text">Red Card</string>
+    <string name="corner_button_text">Corner</string>
     <string name="reset_button_text">Reset</string>
 </resources>
