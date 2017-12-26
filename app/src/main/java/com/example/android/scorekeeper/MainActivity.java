@@ -7,14 +7,14 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    int scoreTeamA = 0;
-    int scoreTeamB = 0;
-    int yellowCardsTeamA = 0;
-    int yellowCardsTeamB = 0;
-    int redCardsTeamA = 0;
-    int redCardsTeamB = 0;
-    int cornersTeamA = 0;
-    int cornersTeamB = 0;
+    private int scoreTeamA = 0;
+    private int scoreTeamB = 0;
+    private int yellowCardsTeamA = 0;
+    private int yellowCardsTeamB = 0;
+    private int redCardsTeamA = 0;
+    private int redCardsTeamB = 0;
+    private int cornersTeamA = 0;
+    private int cornersTeamB = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,32 +25,32 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team A.
      */
-    public void displayScoreForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+    private void displayScoreForTeamA(int score) {
+        TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given score for Team B.
      */
-    public void displayScoreForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+    private void displayScoreForTeamB(int score) {
+        TextView scoreView = findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given log for Team A.
      */
-    public void displayLogForTeamA(String log) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_log);
+    private void displayLogForTeamA(String log) {
+        TextView scoreView = findViewById(R.id.team_a_log);
         scoreView.setText(log);
     }
 
     /**
      * Displays the given log for Team B.
      */
-    public void displayLogForTeamB(String log) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_log);
+    private void displayLogForTeamB(String log) {
+        TextView scoreView = findViewById(R.id.team_b_log);
         scoreView.setText(log);
     }
 
