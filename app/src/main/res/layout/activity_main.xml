@@ -21,8 +21,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="16dp"
-                android:textSize="14sp"
+                android:padding="@dimen/spacing_small"
+                android:textSize="@dimen/text_size_small"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/team_a_name" />
@@ -32,8 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:layout_marginBottom="24dp"
-                android:textSize="56sp"
+                android:layout_marginBottom="@dimen/spacing_default"
+                android:textSize="@dimen/text_size_extra_large"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/default_score" />
@@ -43,8 +43,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:layout_marginBottom="24dp"
-                android:textSize="25sp"
+                android:layout_marginBottom="@dimen/spacing_default"
+                android:textSize="@dimen/text_size_medium"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/default_log" />
@@ -52,35 +52,35 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addGoalTeamA"
                 android:text="@string/goal_button_text" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addYellowCardTeamA"
                 android:text="@string/yellowCard_button_text" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addRedCardTeamA"
                 android:text="@string/redCard_button_text" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addCornerTeamA"
                 android:text="@string/corner_button_text" />
 
@@ -89,7 +89,7 @@
         <View
             android:layout_width="1dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="@dimen/spacing_small"
             android:background="@android:color/darker_gray"/>
 
         <LinearLayout
@@ -103,8 +103,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:padding="16dp"
-                android:textSize="14sp"
+                android:padding="@dimen/spacing_small"
+                android:textSize="@dimen/text_size_small"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
                 android:text="@string/team_b_name" />
@@ -114,8 +114,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:layout_marginBottom="24dp"
-                android:textSize="56sp"
+                android:layout_marginBottom="@dimen/spacing_default"
+                android:textSize="@dimen/text_size_extra_large"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/default_score" />
@@ -125,8 +125,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:layout_marginBottom="24dp"
-                android:textSize="25sp"
+                android:layout_marginBottom="@dimen/spacing_default"
+                android:textSize="@dimen/text_size_medium"
                 android:textColor="#000000"
                 android:fontFamily="sans-serif-light"
                 android:text="@string/default_log" />
@@ -134,35 +134,35 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addGoalTeamB"
                 android:text="@string/goal_button_text" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addYellowCardTeamB"
                 android:text="@string/yellowCard_button_text" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addRedCardTeamB"
                 android:text="@string/redCard_button_text" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_marginLeft="24dp"
-                android:layout_marginRight="24dp"
+                android:layout_marginTop="@dimen/spacing_extra_small"
+                android:layout_marginLeft="@dimen/spacing_default"
+                android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addCornerTeamB"
                 android:text="@string/corner_button_text" />
 
@@ -175,7 +175,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="@dimen/spacing_large"
         android:onClick="resetScore"
         android:text="@string/reset_button_text"
         />
