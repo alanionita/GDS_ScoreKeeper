@@ -2,4 +2,6 @@
     <string name="app_name">ScoreKeeper</string>
     <string name="team_a_name">Manchester City</string>
     <string name="team_b_name">Manchester United</string>
+    <string name="default_score">0</string>
+    <string name="default_log">LOG</string>
 </resources>
