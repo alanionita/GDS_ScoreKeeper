@@ -17,6 +17,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/team_a_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -24,7 +25,7 @@
                 android:textSize="14sp"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
-                android:text="Team A" />
+                android:text="@string/team_a_name" />
 
             <TextView
                 android:id="@+id/team_a_score"
@@ -98,6 +99,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/team_b_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
@@ -105,7 +107,7 @@
                 android:textSize="14sp"
                 android:textColor="#616161"
                 android:fontFamily="sans-serif-medium"
-                android:text="Team B" />
+                android:text="@string/team_b_name" />
 
             <TextView
                 android:id="@+id/team_b_score"
