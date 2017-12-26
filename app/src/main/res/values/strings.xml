@@ -4,4 +4,9 @@
     <string name="team_b_name">Manchester United</string>
     <string name="default_score">0</string>
     <string name="default_log">LOG</string>
+    <string name="goal_button_text">Goal</string>
+    <string name="yellowCard_button_text">Yellow Card</string>
+    <string name="redCard_button_text">Red Card</string>
+    <string name="corner_button_text">Red Card</string>
+    <string name="reset_button_text">Reset</string>
 </resources>
