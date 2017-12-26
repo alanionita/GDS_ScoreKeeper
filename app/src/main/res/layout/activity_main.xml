@@ -37,13 +37,24 @@
                 android:fontFamily="sans-serif-light"
                 android:text="0" />
 
+            <TextView
+                android:id="@+id/team_a_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-light"
+                android:text="LOG" />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:onClick="addThreePointsTeamA"
-                android:text="+3 Points" />
+                android:onClick="addGoalTeamA"
+                android:text="Goal" />
 
             <Button
                 android:layout_width="match_parent"
@@ -51,8 +62,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:onClick="addTwoPointsTeamA"
-                android:text="+2 Points" />
+                android:onClick="addYellowCardTeamA"
+                android:text="Yellow Card" />
 
             <Button
                 android:layout_width="match_parent"
@@ -60,8 +71,17 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:onClick="freeThrowTeamA"
-                android:text="Free Throw" />
+                android:onClick="addRedCardTeamA"
+                android:text="Red Card" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addCornerTeamA"
+                android:text="Corner" />
 
         </LinearLayout>
 
@@ -98,13 +118,24 @@
                 android:fontFamily="sans-serif-light"
                 android:text="0" />
 
+            <TextView
+                android:id="@+id/team_b_log"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:textSize="25sp"
+                android:textColor="#000000"
+                android:fontFamily="sans-serif-light"
+                android:text="LOG" />
+
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:onClick="addThreePointsTeamB"
-                android:text="+3 Points" />
+                android:onClick="addGoalTeamB"
+                android:text="Goal" />
 
             <Button
                 android:layout_width="match_parent"
@@ -112,8 +143,8 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:onClick="addTwoPointsTeamB"
-                android:text="+2 Points" />
+                android:onClick="addYellowCardTeamB"
+                android:text="Yellow Card" />
 
             <Button
                 android:layout_width="match_parent"
@@ -121,8 +152,17 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
-                android:onClick="freeThrowTeamB"
-                android:text="Free Throw" />
+                android:onClick="addRedCardTeamB"
+                android:text="Red Card" />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginLeft="24dp"
+                android:layout_marginRight="24dp"
+                android:onClick="addCornerTeamB"
+                android:text="Corner" />
 
         </LinearLayout>
 
