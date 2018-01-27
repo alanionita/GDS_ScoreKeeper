@@ -14,7 +14,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/team_a_name"
@@ -49,40 +50,48 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/default_log" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addGoalTeamA"
-                android:text="@string/goal_button_text" />
+                android:src="@mipmap/ic_goal_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginTop="@dimen/spacing_extra_small"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addYellowCardTeamA"
-                android:text="@string/yellowCard_button_text" />
+                android:src="@mipmap/ic_yellow_card_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginTop="@dimen/spacing_extra_small"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addRedCardTeamA"
-                android:text="@string/redCard_button_text" />
+                android:src="@mipmap/ic_red_card_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginTop="@dimen/spacing_extra_small"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addCornerTeamA"
-                android:text="@string/corner_button_text" />
+                android:src="@mipmap/ic_corner_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
         </LinearLayout>
 
@@ -96,7 +105,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:gravity="center">
 
             <TextView
                 android:id="@+id/team_b_name"
@@ -131,53 +141,61 @@
                 android:fontFamily="sans-serif-light"
                 android:text="@string/default_log" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addGoalTeamB"
-                android:text="@string/goal_button_text" />
+                android:src="@mipmap/ic_goal_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginTop="@dimen/spacing_extra_small"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addYellowCardTeamB"
-                android:text="@string/yellowCard_button_text" />
+                android:src="@mipmap/ic_yellow_card_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginTop="@dimen/spacing_extra_small"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addRedCardTeamB"
-                android:text="@string/redCard_button_text" />
+                android:src="@mipmap/ic_red_card_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:layout_width="@dimen/image_button_height_width"
+                android:layout_height="@dimen/image_button_height_width"
                 android:layout_marginTop="@dimen/spacing_extra_small"
                 android:layout_marginLeft="@dimen/spacing_default"
                 android:layout_marginRight="@dimen/spacing_default"
                 android:onClick="addCornerTeamB"
-                android:text="@string/corner_button_text" />
+                android:src="@mipmap/ic_corner_button_foreground"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="false"/>
 
         </LinearLayout>
 
     </LinearLayout>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <ImageButton
+        android:layout_width="@dimen/reset_button_width"
+        android:layout_height="@dimen/reset_button_height"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/spacing_large"
         android:onClick="resetScore"
-        android:text="@string/reset_button_text"
-        />
+        android:src="@drawable/ic_refresh_black_24dp"/>
 
 </RelativeLayout>
+
