@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="@dimen/reset_button_width"
+        android:layout_height="@dimen/reset_button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/spacing_large"
+        android:onClick="resetScore"
+        android:src="@drawable/ic_refresh_black_24dp"
+        android:layout_gravity="bottom|center"
+        android:backgroundTint="@color/scoreKeeperDarkGrey"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingLeft="@dimen/spacing_extra_small"
+                android:paddingRight="@dimen/spacing_extra_small">
+
+                <ImageView
+                    android:id="@+id/crest_a"
+                    android:layout_width="@dimen/crests_height_width"
+                    android:layout_height="@dimen/crests_height_width"
+                    android:src="@mipmap/ic_man_untd_crest_foreground"
+                    android:layout_margin="@dimen/crests_margin"/>
+
+                <TextView
+                    android:id="@+id/team_a_name"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/scoreKeeperDarkGrey"
+                    android:text="@string/team_a_name"
+                    android:textAlignment="viewStart"/>
+
+                <TextView
+                    android:id="@+id/team_a_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_extra_large"
+                    android:textColor="@color/scoreKeeperBlack"
+                    android:text="@string/default_score"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_extra_large"
+                    android:textColor="@color/scoreKeeperBlack"
+                    android:text="-"
+                    android:textAlignment="viewStart"/>
+
+                <TextView
+                    android:id="@+id/team_b_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_extra_large"
+                    android:textColor="@color/scoreKeeperBlack"
+                    android:text="@string/default_score"/>
+
+                <TextView
+                    android:id="@+id/team_b_name"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_small"
+                    android:textColor="@color/scoreKeeperDarkGrey"
+                    android:text="@string/team_b_name"
+                    android:textAlignment="viewEnd"/>
+
+                <ImageView
+                    android:layout_width="@dimen/crests_height_width"
+                    android:layout_height="@dimen/crests_height_width"
+                    android:src="@mipmap/ic_barcelona_crest_foreground"
+                    android:layout_margin="@dimen/crests_margin"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/team_a_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/spacing_default"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/scoreKeeperBlack"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/default_log" />
+
+
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addGoalTeamA"
+                        android:src="@mipmap/ic_goal_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addYellowCardTeamA"
+                        android:src="@mipmap/ic_yellow_card_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false" />
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addRedCardTeamA"
+                        android:src="@mipmap/ic_red_card_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addCornerTeamA"
+                        android:src="@mipmap/ic_corner_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/spacing_small"
+                    android:background="@android:color/darker_gray"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+
+
+
+                    </LinearLayout>
+
+
+
+                    <TextView
+                        android:id="@+id/team_b_log"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:layout_marginBottom="@dimen/spacing_default"
+                        android:textSize="@dimen/text_size_medium"
+                        android:textColor="@color/scoreKeeperBlack"
+                        android:fontFamily="sans-serif-light"
+                        android:text="@string/default_log" />
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addGoalTeamB"
+                        android:src="@mipmap/ic_goal_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addYellowCardTeamB"
+                        android:src="@mipmap/ic_yellow_card_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addRedCardTeamB"
+                        android:src="@mipmap/ic_red_card_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                    <ImageButton
+                        android:layout_width="@dimen/image_button_height_width"
+                        android:layout_height="@dimen/image_button_height_width"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:layout_marginLeft="@dimen/spacing_default"
+                        android:layout_marginRight="@dimen/spacing_default"
+                        android:onClick="addCornerTeamB"
+                        android:src="@mipmap/ic_corner_button_foreground"
+                        android:scaleType="fitCenter"
+                        android:adjustViewBounds="false"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
