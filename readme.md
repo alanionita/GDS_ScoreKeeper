@@ -2,6 +2,8 @@
 
 ## ScoreKeeper
 
+![ScoreKeeper v1.0](http://g.recordit.co/eseChLGuG8.gif)
+
 ### Project Overview
 
 The goal was to create an Score Keeper app which gives a user the ability to keep track of the score of a live football match.
