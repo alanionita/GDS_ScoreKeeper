@@ -69,7 +69,14 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayLogForTeamA(String log) {
         TextView scoreView = findViewById(R.id.team_a_log);
-        scoreView.setText(log);
+        scoreView.append(log);
+    }
+
+    private void resetLogs () {
+        TextView scoreViewTeamA = findViewById(R.id.team_a_log);
+        TextView scoreViewTeamB = findViewById(R.id.team_b_log);
+        scoreViewTeamA.setText("");
+        scoreViewTeamB.setText("");
     }
 
     /**
@@ -77,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
      */
     private void displayLogForTeamB(String log) {
         TextView scoreView = findViewById(R.id.team_b_log);
-        scoreView.setText(log);
+        scoreView.append(log);
     }
 
 
@@ -95,8 +102,7 @@ public class MainActivity extends AppCompatActivity {
         cornersTeamB = 0;
         displayScoreForTeamA(scoreTeamA);
         displayScoreForTeamB(scoreTeamB);
-        displayLogForTeamA("LOG");
-        displayLogForTeamB("LOG");
+        resetLogs();
     }
 
     /**
@@ -105,7 +111,7 @@ public class MainActivity extends AppCompatActivity {
     public void addGoalTeamA(View view) {
         scoreTeamA = scoreTeamA + 1;
         displayScoreForTeamA(scoreTeamA);
-        displayLogForTeamA("⚽ 3\", Messi");
+        displayLogForTeamA("⚽ 3\", Messi\n");
     }
 
     /**
@@ -114,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
     public void addGoalTeamB(View view) {
         scoreTeamB = scoreTeamB + 1;
         displayScoreForTeamB(scoreTeamB);
-        displayLogForTeamB("⚽ 78\", Rooney");
+        displayLogForTeamB("⚽ 78\", Rooney\n");
     }
 
     /**
@@ -122,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addYellowCardTeamA(View view) {
         yellowCardsTeamA = yellowCardsTeamA + 1;
-        displayLogForTeamA("🔶 12\", Messi!");
+        displayLogForTeamA("🔶 12\", Messi!\n");
     }
 
     /**
@@ -130,7 +136,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addYellowCardTeamB(View view) {
         yellowCardsTeamB = yellowCardsTeamB + 1;
-        displayLogForTeamB("🔶 12\", Rooney!");
+        displayLogForTeamB("🔶 12\", Rooney!\n");
     }
 
     /**
@@ -138,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addRedCardTeamA(View view) {
         redCardsTeamA = redCardsTeamA + 1;
-        displayLogForTeamA("🔴 24\", Messi!");
+        displayLogForTeamA("🔴 24\", Messi!\n");
     }
 
     /**
@@ -146,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addRedCardTeamB(View view) {
         redCardsTeamB = redCardsTeamB + 1;
-        displayLogForTeamB("🔴 32\", Evra!");
+        displayLogForTeamB("🔴 32\", Evra!\n");
     }
 
     /**
@@ -154,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addCornerTeamA(View view) {
         cornersTeamA = cornersTeamA + 1;
-        displayLogForTeamA("\uD83C\uDF7F 45\", Nani!");
+        displayLogForTeamA("\uD83C\uDF7F 45\", Nani!\n");
     }
 
     /**
@@ -162,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addCornerTeamB(View view) {
         cornersTeamB = cornersTeamB + 1;
-        displayLogForTeamB("\uD83C\uDF7F 56\", Evra!");
+        displayLogForTeamB("\uD83C\uDF7F 56\", Evra!\n");
     }
 }
 
