@@ -1,11 +1,14 @@
 package com.example.android.scorekeeper;
 
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.example.android.scorekeeper.ChooseTeamModal;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -55,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 goalFab.bringToFront();
-                addGoalTeamA(view);
+                ChooseTeamModal teamModal = new ChooseTeamModal();
+                teamModal.show(getFragmentManager(), "dialog");
             }
         });
 
@@ -65,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team A.
      */
-    private void displayScoreForTeamA(int score) {
+    public void displayScoreForTeamA(int score) {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
