@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:fab="http://schemas.android.com/tools">
+    xmlns:fab="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/main_floating_button"
@@ -11,10 +11,10 @@
         android:layout_height="@dimen/reset_button_height"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/spacing_default"
-        android:src="@drawable/ic_add_button"
         android:layout_gravity="bottom|center"
-        android:backgroundTint="@color/scoreKeeperDarkGrey"/>
+        android:layout_marginBottom="@dimen/spacing_default"
+        android:backgroundTint="@color/scoreKeeperDarkGrey"
+        android:src="@drawable/ic_add_button" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -35,29 +35,30 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/scoreboard_height"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="@dimen/crest_and_team_names_width"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
+
                         <ImageView
                             android:id="@+id/crest_a"
                             android:layout_width="@dimen/crests_height_width"
                             android:layout_height="@dimen/crests_height_width"
-                            android:src="@mipmap/ic_man_untd_crest_foreground"
-                            android:layout_margin="@dimen/crests_margin"/>
+                            android:layout_margin="@dimen/crests_margin"
+                            android:src="@mipmap/ic_man_untd_crest_foreground" />
 
                         <TextView
                             android:id="@+id/team_a_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/text_size_small"
-                            android:textColor="@color/LightSlateGrey"
                             android:text="@string/team_a_name"
-                            android:textAlignment="center"/>
+                            android:textAlignment="center"
+                            android:textColor="@color/LightSlateGrey"
+                            android:textSize="@dimen/text_size_small" />
 
                     </LinearLayout>
 
@@ -65,33 +66,33 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal"
+                        android:layout_margin="@dimen/spacing_default"
                         android:gravity="center"
-                        android:layout_margin="@dimen/spacing_default">
+                        android:orientation="horizontal">
 
                         <TextView
                             android:id="@+id/team_a_score"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/text_size_extra_large"
+                            android:text="@string/default_score"
                             android:textColor="@color/Alabaster"
-                            android:text="@string/default_score"/>
+                            android:textSize="@dimen/text_size_extra_large" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/text_size_extra_large"
-                            android:textColor="@color/Alabaster"
                             android:text="@string/score_delimiter"
-                            android:textAlignment="viewStart"/>
+                            android:textAlignment="viewStart"
+                            android:textColor="@color/Alabaster"
+                            android:textSize="@dimen/text_size_extra_large" />
 
                         <TextView
                             android:id="@+id/team_b_score"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/text_size_extra_large"
+                            android:text="@string/default_score"
                             android:textColor="@color/Alabaster"
-                            android:text="@string/default_score"/>
+                            android:textSize="@dimen/text_size_extra_large" />
 
                     </LinearLayout>
 
@@ -99,25 +100,24 @@
                     <LinearLayout
                         android:layout_width="@dimen/crest_and_team_names_width"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="@dimen/crests_height_width"
                             android:layout_height="@dimen/crests_height_width"
-                            android:src="@mipmap/ic_barcelona_crest_foreground"
-                            android:layout_margin="@dimen/crests_margin"/>
+                            android:layout_margin="@dimen/crests_margin"
+                            android:src="@mipmap/ic_barcelona_crest_foreground" />
 
                         <TextView
                             android:id="@+id/team_b_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/text_size_small"
+                            android:text="@string/team_b_name"
                             android:textColor="@color/LightSlateGrey"
-                            android:text="@string/team_b_name"/>
+                            android:textSize="@dimen/text_size_small" />
 
                     </LinearLayout>
-
 
 
                 </LinearLayout>
@@ -125,30 +125,28 @@
             </android.support.v7.widget.CardView>
 
 
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/team_a_log"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:gravity="center_horizontal"
                         android:layout_marginBottom="@dimen/spacing_default"
-                        android:textSize="@dimen/text_size_medium"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal"
                         android:textColor="@color/scoreKeeperBlack"
-                        android:fontFamily="sans-serif-light"/>
-
+                        android:textSize="@dimen/text_size_medium" />
 
 
                     <ImageButton
@@ -156,43 +154,43 @@
                         android:layout_height="@dimen/image_button_height_width"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:adjustViewBounds="false"
                         android:onClick="addGoalTeamA"
-                        android:src="@mipmap/ic_goal_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_goal_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:adjustViewBounds="false"
                         android:onClick="addYellowCardTeamA"
-                        android:src="@mipmap/ic_yellow_card_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false" />
+                        android:src="@mipmap/ic_yellow_card_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:adjustViewBounds="false"
                         android:onClick="addRedCardTeamA"
-                        android:src="@mipmap/ic_red_card_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_red_card_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:adjustViewBounds="false"
                         android:onClick="addCornerTeamA"
-                        android:src="@mipmap/ic_corner_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_corner_button_foreground" />
 
                 </LinearLayout>
 
@@ -200,74 +198,71 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-
-
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
 
                     </LinearLayout>
-
 
 
                     <TextView
                         android:id="@+id/team_b_log"
                         android:layout_width="match_parent"
                         android:layout_height="200dp"
-                        android:gravity="center_horizontal"
                         android:layout_marginBottom="@dimen/spacing_default"
-                        android:textSize="@dimen/text_size_medium"
+                        android:fontFamily="sans-serif-light"
+                        android:gravity="center_horizontal"
                         android:textColor="@color/scoreKeeperBlack"
-                        android:fontFamily="sans-serif-light"/>
+                        android:textSize="@dimen/text_size_medium" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:adjustViewBounds="false"
                         android:onClick="addGoalTeamB"
-                        android:src="@mipmap/ic_goal_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_goal_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:adjustViewBounds="false"
                         android:onClick="addYellowCardTeamB"
-                        android:src="@mipmap/ic_yellow_card_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_yellow_card_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:adjustViewBounds="false"
                         android:onClick="addRedCardTeamB"
-                        android:src="@mipmap/ic_red_card_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_red_card_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
                         android:layout_marginLeft="@dimen/spacing_default"
                         android:layout_marginRight="@dimen/spacing_default"
+                        android:layout_marginTop="@dimen/spacing_extra_small"
+                        android:adjustViewBounds="false"
                         android:onClick="addCornerTeamB"
-                        android:src="@mipmap/ic_corner_button_foreground"
                         android:scaleType="fitCenter"
-                        android:adjustViewBounds="false"/>
+                        android:src="@mipmap/ic_corner_button_foreground" />
 
                 </LinearLayout>
 
@@ -281,32 +276,144 @@
         android:id="@+id/resetLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="100dp"
         android:layout_marginRight="56dp"
+        android:orientation="horizontal"
         android:visibility="invisible">
 
         <TextView
             android:id="@+id/reset_button_label"
+            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            style="@style/TextAppearance.AppCompat.Title"
-            android:text="Reset"
             android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"/>
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Reset" />
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/reset_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@drawable/ic_refresh_black_24dp"/>
+            android:src="@drawable/ic_refresh_black_24dp" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/goalLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="160dp"
+        android:layout_marginRight="85dp"
+        android:orientation="horizontal"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/goal_button_label"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Add goal" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/goal_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/ic_goal_button_foreground" />
+
+
+
+    </LinearLayout>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        card_view:cardElevation="10dp"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/spacing_default">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Which team?"
+                android:layout_marginBottom="@dimen/spacing_extra_small"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/modal_team_a"
+                    android:layout_width="@dimen/crest_and_team_names_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/crests_height_width"
+                        android:layout_height="@dimen/crests_height_width"
+                        android:layout_margin="@dimen/crests_margin"
+                        android:src="@mipmap/ic_man_untd_crest_foreground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/team_a_name"
+                        android:textAlignment="center"
+                        android:textColor="@color/LightSlateGrey"
+                        android:textSize="@dimen/text_size_small" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/modal_team_b"
+                    android:layout_width="@dimen/crest_and_team_names_width"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/crests_height_width"
+                        android:layout_height="@dimen/crests_height_width"
+                        android:layout_margin="@dimen/crests_margin"
+                        android:src="@mipmap/ic_barcelona_crest_foreground" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/team_b_name"
+                        android:textColor="@color/LightSlateGrey"
+                        android:textSize="@dimen/text_size_small" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 </android.support.design.widget.CoordinatorLayout>
 

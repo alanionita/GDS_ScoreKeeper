@@ -25,15 +25,19 @@ public class MainActivity extends AppCompatActivity {
 
         FloatingActionButton mainFab = (FloatingActionButton) findViewById(R.id.main_floating_button);
         final FloatingActionButton resetFab = (FloatingActionButton) findViewById(R.id.reset_button);
+        final FloatingActionButton goalFab = (FloatingActionButton) findViewById(R.id.goal_button);
         final LinearLayout resetLayout = (LinearLayout) findViewById(R.id.resetLayout);
+        final LinearLayout goalLayout = (LinearLayout) findViewById(R.id.goalLayout);
 
         mainFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(resetLayout.getVisibility() == View.VISIBLE){
                     resetLayout.setVisibility(View.GONE);
+                    goalLayout.setVisibility(View.GONE);
                 } else {
                     resetLayout.setVisibility(View.VISIBLE);
+                    goalLayout.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -46,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
                 resetScore(view);
             }
         });
+
+        goalFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goalFab.bringToFront();
+                addGoalTeamA(view);
+            }
+        });
+
+
     }
 
     /**
