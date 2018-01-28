@@ -1,8 +1,10 @@
 package com.example.android.scorekeeper;
 
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,6 +22,30 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        FloatingActionButton mainFab = (FloatingActionButton) findViewById(R.id.main_floating_button);
+        final FloatingActionButton resetFab = (FloatingActionButton) findViewById(R.id.reset_button);
+        final LinearLayout resetLayout = (LinearLayout) findViewById(R.id.resetLayout);
+
+        mainFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(resetLayout.getVisibility() == View.VISIBLE){
+                    resetLayout.setVisibility(View.GONE);
+                } else {
+                    resetLayout.setVisibility(View.VISIBLE);
+                }
+
+            }
+        });
+
+        resetFab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                resetFab.bringToFront();
+                resetScore(view);
+            }
+        });
     }
 
     /**
