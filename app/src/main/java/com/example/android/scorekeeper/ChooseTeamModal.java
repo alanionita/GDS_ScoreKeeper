@@ -29,16 +29,18 @@ public class ChooseTeamModal extends DialogFragment {
     private class OnTeamAClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
-           MainActivity mainActivity = new MainActivity();
-           mainActivity.addGoalTeamA(view);
+           // references MainActivity and gets addGoalTeamA method
+           ((MainActivity)getActivity()).addGoalTeamA(view);
+           dismiss();
         }
     }
 
     private class OnTeamBClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
-            MainActivity mainActivity = new MainActivity();
-            mainActivity.addGoalTeamB(view);
+            // references MainActivity and gets addGoalTeamB method
+            ((MainActivity)getActivity()).addGoalTeamB(view);
+            dismiss();
         }
     }
 

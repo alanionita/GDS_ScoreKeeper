@@ -148,17 +148,6 @@
                         android:textColor="@color/scoreKeeperBlack"
                         android:textSize="@dimen/text_size_medium" />
 
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:adjustViewBounds="false"
-                        android:onClick="addGoalTeamA"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_goal_button_foreground" />
-
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"
                         android:layout_height="@dimen/image_button_height_width"
@@ -220,16 +209,6 @@
                         android:gravity="center_horizontal"
                         android:textColor="@color/scoreKeeperBlack"
                         android:textSize="@dimen/text_size_medium" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:adjustViewBounds="false"
-                        android:onClick="addGoalTeamB"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_goal_button_foreground" />
 
                     <ImageButton
                         android:layout_width="@dimen/image_button_height_width"

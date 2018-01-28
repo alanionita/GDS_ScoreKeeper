@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Displays the given score for Team A.
      */
-    public void displayScoreForTeamA(int score) {
+    private void displayScoreForTeamA(int score) {
         TextView scoreView = findViewById(R.id.team_a_score);
         scoreView.setText(String.valueOf(score));
     }
