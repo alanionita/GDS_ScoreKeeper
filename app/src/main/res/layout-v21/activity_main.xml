@@ -20,7 +20,8 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:fillViewport="true"
+        android:background="@color/Tranquil">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,49 +127,71 @@
             </android.support.v7.widget.CardView>
 
 
-            <LinearLayout
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                android:layout_marginTop="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/team_a_log"
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginBottom="@dimen/spacing_default"
-                        android:fontFamily="sans-serif-light"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/scoreKeeperBlack"
-                        android:textSize="@dimen/text_size_medium" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
+                    android:text="Highlights"
+                    android:textColor="@color/Daintree"
+                    android:layout_alignStart="@id/highlghts_card"
+                    android:layout_marginLeft="10dp"/>
+                <android.support.v7.widget.CardView
+                    android:id="@+id/highlghts_card"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="vertical">
+                    card_view:cardBackgroundColor="@color/Alabaster"
+                    android:layout_marginTop="20dp"
+                    android:padding="10dp">
 
-                    <TextView
-                        android:id="@+id/team_b_log"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:layout_marginBottom="@dimen/spacing_default"
-                        android:fontFamily="sans-serif-light"
-                        android:gravity="center_horizontal"
-                        android:textColor="@color/scoreKeeperBlack"
-                        android:textSize="@dimen/text_size_medium" />
-                </LinearLayout>
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-            </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team_a_log"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/spacing_default"
+                                android:fontFamily="sans-serif-light"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/scoreKeeperBlack"
+                                android:textSize="@dimen/text_size_medium" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/team_b_log"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/spacing_default"
+                                android:fontFamily="sans-serif-light"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/scoreKeeperBlack"
+                                android:textSize="@dimen/text_size_medium" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
 
 
         </LinearLayout>
