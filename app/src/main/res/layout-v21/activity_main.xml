@@ -126,7 +126,6 @@
 
             </android.support.v7.widget.CardView>
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -157,17 +156,17 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="@dimen/spacing_extra_small">
 
                             <TextView
                                 android:id="@+id/team_a_log"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="@dimen/spacing_default"
+                                android:layout_height="match_parent"
                                 android:fontFamily="sans-serif-light"
-                                android:gravity="center_horizontal"
                                 android:textColor="@color/scoreKeeperBlack"
-                                android:textSize="@dimen/text_size_medium" />
+                                android:textSize="@dimen/text_size_medium"
+                                android:textAlignment="viewStart"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -175,17 +174,17 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
-                            android:orientation="vertical">
+                            android:orientation="vertical"
+                            android:padding="@dimen/spacing_extra_small">
 
                             <TextView
                                 android:id="@+id/team_b_log"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_marginBottom="@dimen/spacing_default"
+                                android:layout_height="match_parent"
                                 android:fontFamily="sans-serif-light"
-                                android:gravity="center_horizontal"
                                 android:textColor="@color/scoreKeeperBlack"
-                                android:textSize="@dimen/text_size_medium" />
+                                android:textSize="@dimen/text_size_medium"
+                                android:textAlignment="viewEnd"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -211,13 +210,13 @@
 
         <TextView
             android:id="@+id/reset_button_label"
-            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:text="Reset" />
+            android:text="Reset"
+            android:textSize="@dimen/text_size_medium"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/reset_button"
@@ -243,13 +242,13 @@
 
         <TextView
             android:id="@+id/goal_button_label"
-            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
-            android:text="Add goal" />
+            android:text="Goal"
+            android:textSize="@dimen/text_size_medium"/>
 
         <android.support.design.widget.FloatingActionButton
             android:id="@+id/goal_button"
@@ -274,12 +273,12 @@
 
         <TextView
             android:id="@+id/yellow_card_button_label"
-            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:textSize="@dimen/text_size_medium"
             android:text="Yellow Card" />
 
         <android.support.design.widget.FloatingActionButton
@@ -305,12 +304,12 @@
 
         <TextView
             android:id="@+id/red_card_button_label"
-            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:textSize="@dimen/text_size_medium"
             android:text="Red Card" />
 
         <android.support.design.widget.FloatingActionButton
@@ -336,12 +335,12 @@
 
         <TextView
             android:id="@+id/corner_button_label"
-            style="@style/TextAppearance.AppCompat.Title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
             android:layout_weight="1"
+            android:textSize="@dimen/text_size_medium"
             android:text="Corner" />
 
         <android.support.design.widget.FloatingActionButton

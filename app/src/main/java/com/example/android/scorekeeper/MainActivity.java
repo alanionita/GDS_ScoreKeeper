@@ -204,7 +204,8 @@ public class MainActivity extends AppCompatActivity {
     public void addGoalTeamA(View view) {
         scoreTeamA = scoreTeamA + 1;
         displayScoreForTeamA(scoreTeamA);
-        displayLogForTeamA("⚽ 3\", Messi\n");
+        displayLogForTeamA("3\" | ⚽ | Messi \n");
+        displayLogForTeamB("\n");
     }
 
     /**
@@ -213,7 +214,8 @@ public class MainActivity extends AppCompatActivity {
     public void addGoalTeamB(View view) {
         scoreTeamB = scoreTeamB + 1;
         displayScoreForTeamB(scoreTeamB);
-        displayLogForTeamB("⚽ 78\", Rooney\n");
+        displayLogForTeamB("Rooney | ⚽ | 78\" \n");
+        displayLogForTeamA("\n");
     }
 
     /**
@@ -221,7 +223,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addYellowCardTeamA(View view) {
         yellowCardsTeamA = yellowCardsTeamA + 1;
-        displayLogForTeamA("🔶 12\", Messi!\n");
+        displayLogForTeamA("12\" | 🔶 | Messi\n");
+        displayLogForTeamB("\n");
     }
 
     /**
@@ -229,7 +232,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addYellowCardTeamB(View view) {
         yellowCardsTeamB = yellowCardsTeamB + 1;
-        displayLogForTeamB("🔶 12\", Rooney!\n");
+        displayLogForTeamB("Rooney | 🔶 | 12\"\n");
+        displayLogForTeamA("\n");
     }
 
     /**
@@ -237,7 +241,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addRedCardTeamA(View view) {
         redCardsTeamA = redCardsTeamA + 1;
-        displayLogForTeamA("🔴 24\", Messi!\n");
+        displayLogForTeamA("24\" | 🔴 | Messi\n");
+        displayLogForTeamB("\n");
     }
 
     /**
@@ -245,7 +250,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addRedCardTeamB(View view) {
         redCardsTeamB = redCardsTeamB + 1;
-        displayLogForTeamB("🔴 32\", Evra!\n");
+        displayLogForTeamB("Evra | 🔴 | 32\"\n");
+        displayLogForTeamA("\n");
     }
 
     /**
@@ -253,7 +259,8 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addCornerTeamA(View view) {
         cornersTeamA = cornersTeamA + 1;
-        displayLogForTeamA("\uD83C\uDF7F 45\", Nani!\n");
+        displayLogForTeamA("45\" | \uD83C\uDF7F | Nani\n");
+        displayLogForTeamB("\n");
     }
 
     /**
@@ -261,7 +268,9 @@ public class MainActivity extends AppCompatActivity {
      */
     public void addCornerTeamB(View view) {
         cornersTeamB = cornersTeamB + 1;
-        displayLogForTeamB("\uD83C\uDF7F 56\", Evra!\n");
+        displayLogForTeamB("Evra | \uD83C\uDF7F | 56\"\n");
+        displayLogForTeamA("\n");
+
     }
 }
 
