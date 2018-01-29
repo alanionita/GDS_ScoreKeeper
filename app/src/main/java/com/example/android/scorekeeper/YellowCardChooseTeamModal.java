@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
  * Created by alanionita on 28/01/2018.
  */
 
-public class ChooseTeamModal extends DialogFragment {
+public class YellowCardChooseTeamModal extends DialogFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,8 +29,8 @@ public class ChooseTeamModal extends DialogFragment {
     private class OnTeamAClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
-           // references MainActivity and gets addGoalTeamA method
-           ((MainActivity)getActivity()).addGoalTeamA(view);
+           // references MainActivity and gets addYellowCardTeamA method
+           ((MainActivity)getActivity()).addYellowCardTeamA(view);
            dismiss();
         }
     }
@@ -38,8 +38,8 @@ public class ChooseTeamModal extends DialogFragment {
     private class OnTeamBClickListener implements View.OnClickListener{
         @Override
         public void onClick(View view) {
-            // references MainActivity and gets addGoalTeamB method
-            ((MainActivity)getActivity()).addGoalTeamB(view);
+            // references MainActivity and gets addYellowCardTeamB method
+            ((MainActivity)getActivity()).addYellowCardTeamB(view);
             dismiss();
         }
     }

@@ -147,40 +147,6 @@
                         android:gravity="center_horizontal"
                         android:textColor="@color/scoreKeeperBlack"
                         android:textSize="@dimen/text_size_medium" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
-                        android:adjustViewBounds="false"
-                        android:onClick="addYellowCardTeamA"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_yellow_card_button_foreground" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
-                        android:adjustViewBounds="false"
-                        android:onClick="addRedCardTeamA"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_red_card_button_foreground" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
-                        android:adjustViewBounds="false"
-                        android:onClick="addCornerTeamA"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_corner_button_foreground" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -189,16 +155,6 @@
                     android:layout_weight="1"
                     android:gravity="center"
                     android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="horizontal">
-
-
-                    </LinearLayout>
-
 
                     <TextView
                         android:id="@+id/team_b_log"
@@ -209,40 +165,6 @@
                         android:gravity="center_horizontal"
                         android:textColor="@color/scoreKeeperBlack"
                         android:textSize="@dimen/text_size_medium" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
-                        android:adjustViewBounds="false"
-                        android:onClick="addYellowCardTeamB"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_yellow_card_button_foreground" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
-                        android:adjustViewBounds="false"
-                        android:onClick="addRedCardTeamB"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_red_card_button_foreground" />
-
-                    <ImageButton
-                        android:layout_width="@dimen/image_button_height_width"
-                        android:layout_height="@dimen/image_button_height_width"
-                        android:layout_marginLeft="@dimen/spacing_default"
-                        android:layout_marginRight="@dimen/spacing_default"
-                        android:layout_marginTop="@dimen/spacing_extra_small"
-                        android:adjustViewBounds="false"
-                        android:onClick="addCornerTeamB"
-                        android:scaleType="fitCenter"
-                        android:src="@mipmap/ic_corner_button_foreground" />
-
                 </LinearLayout>
 
             </LinearLayout>
@@ -261,7 +183,7 @@
         android:layout_marginBottom="100dp"
         android:layout_marginRight="56dp"
         android:orientation="horizontal"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/reset_button_label"
@@ -292,7 +214,7 @@
         android:layout_marginBottom="160dp"
         android:layout_marginRight="85dp"
         android:orientation="horizontal"
-        android:visibility="invisible">
+        android:visibility="visible">
 
         <TextView
             android:id="@+id/goal_button_label"
@@ -310,9 +232,96 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:src="@mipmap/ic_goal_button_foreground" />
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/yellowCardLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="220dp"
+        android:layout_marginRight="110dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
 
+        <TextView
+            android:id="@+id/yellow_card_button_label"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Yellow Card" />
 
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/yellow_card_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/ic_yellow_card_button_foreground" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/redCardLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="280dp"
+        android:layout_marginRight="90dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/red_card_button_label"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Red Card" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/red_card_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/ic_red_card_button_foreground" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cornerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="340dp"
+        android:layout_marginRight="70dp"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/corner_button_label"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1"
+            android:text="Corner" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/corner_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:src="@mipmap/ic_corner_button_foreground" />
     </LinearLayout>
 
 
