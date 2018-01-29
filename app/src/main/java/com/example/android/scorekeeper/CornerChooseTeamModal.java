@@ -19,8 +19,8 @@ public class CornerChooseTeamModal extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.team_choosing_modal, container, false);
         getDialog().setTitle("Rate us");
-        LinearLayout teamA = (LinearLayout) view.findViewById(R.id.modal_team_a);
-        LinearLayout teamB = (LinearLayout) view.findViewById(R.id.modal_team_b);
+        LinearLayout teamA = view.findViewById(R.id.modal_team_a);
+        LinearLayout teamB = view.findViewById(R.id.modal_team_b);
         teamA.setOnClickListener(new OnTeamAClickListener());
         teamB.setOnClickListener(new OnTeamBClickListener());
         return view;
@@ -30,7 +30,7 @@ public class CornerChooseTeamModal extends DialogFragment {
         @Override
         public void onClick(View view) {
            // references MainActivity and gets addCornerTeamA method
-           ((MainActivity)getActivity()).addCornerTeamA(view);
+           ((MainActivity)getActivity()).addCornerTeamA();
            dismiss();
         }
     }
@@ -39,7 +39,7 @@ public class CornerChooseTeamModal extends DialogFragment {
         @Override
         public void onClick(View view) {
             // references MainActivity and gets addCornerTeamB method
-            ((MainActivity)getActivity()).addCornerTeamB(view);
+            ((MainActivity)getActivity()).addCornerTeamB();
             dismiss();
         }
     }

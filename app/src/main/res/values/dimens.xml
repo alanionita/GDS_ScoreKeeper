@@ -1,17 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--Text-->
+
     <dimen name="text_size_small">16sp</dimen>
+
     <dimen name="text_size_extra_large">56sp</dimen>
+
     <dimen name="text_size_medium">20sp</dimen>
-    <dimen name="spacing_default">24dp</dimen>
+
+    <!--Spacing-->
+
+    <dimen name="spacing_null">0dp</dimen>
+
     <dimen name="spacing_extra_small">8dp</dimen>
-    <dimen name="spacing_small">16dp</dimen>
-    <dimen name="spacing_large">35dp</dimen>
-    <dimen name="image_button_height_width">60dp</dimen>
-    <dimen name="reset_button_height">60dp</dimen>
-    <dimen name="reset_button_width">100dp</dimen>
-    <dimen name="crests_height_width">40dp</dimen>
-    <dimen name="crests_margin">5dp</dimen>
+
+    <dimen name="spacing_small" tools:keep="@dimen/spacing_small">16dp</dimen>
+
+    <dimen name="spacing_default">24dp</dimen>
+
+    <dimen name="highlights_spacing_1x">10dp</dimen>
+
+    <dimen name="highlights_spacing_2x">20dp</dimen>
+
+
+    <!--Buttons-->
+
+    <dimen name="image_button_height_width" tools:keep="@dimen/image_button_height_width">60dp</dimen>
+
+    <dimen name="main_fab_w_h" tools:keep="@dimen/main_fab_w_h">60dp</dimen>
+
+    <dimen name="secondary_fab_margins">5dp</dimen>
+
+    <dimen name="secondary_fab_group_bottom_margin">80dp</dimen>
+
+    <dimen name="secondary_fab_group_end_margin">115dp</dimen>
+
+
+
+    <!--Scoreboard-->
+
     <dimen name="scoreboard_height">150dp</dimen>
+
     <dimen name="crest_and_team_names_width">100dp</dimen>
+
+    <dimen name="crests_height_width">40dp</dimen>
+
+    <dimen name="crests_margin">5dp</dimen>
 </resources>

@@ -1,13 +1,37 @@
 <resources>
+
+    <!--Names-->
+
     <string name="app_name">ScoreKeeper</string>
     <string name="team_a_name">Manchester United</string>
     <string name="team_b_name">Barcelona</string>
+
+    <!--Labels-->
+
+    <string name="goal_button_label">Goal</string>
+    <string name="yellowCard_button_label">Yellow Card</string>
+    <string name="redCard_button_label">Red Card</string>
+    <string name="corner_button_label">Corner</string>
+    <string name="reset_button_label">Reset</string>
+
+
+    <!--Scores-->
+
     <string name="default_score">0</string>
-    <string name="default_log">LOG</string>
-    <string name="goal_button_text">Goal</string>
-    <string name="yellowCard_button_text">Yellow Card</string>
-    <string name="redCard_button_text">Red Card</string>
-    <string name="corner_button_text">Corner</string>
-    <string name="reset_button_text">Reset</string>
+
     <string name="score_delimiter">:</string>
+
+    <!--Content descriptions-->
+
+    <string name="teamA_crest_content_desc">Team A Crest</string>
+    <string name="teamB_crest_content_desc">Team B Crest</string>
+
+    <!--Highlights-->
+
+    <string name="highlights_title">Highlights</string>
+
+    <!--Choose Team Modal-->
+
+    <string name="modal_which_team">Which team?</string>
+
 </resources>

@@ -7,7 +7,6 @@
     android:gravity="center">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/choose_team_modal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -25,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Which team?"
+                android:text="@string/modal_which_team"
                 android:layout_marginBottom="@dimen/spacing_extra_small"/>
 
             <LinearLayout
@@ -39,13 +38,15 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true">
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:layout_width="@dimen/crests_height_width"
                         android:layout_height="@dimen/crests_height_width"
                         android:layout_margin="@dimen/crests_margin"
-                        android:src="@mipmap/ic_man_untd_crest_foreground" />
+                        android:src="@mipmap/ic_man_untd_crest_foreground"
+                        android:contentDescription="@string/teamA_crest_content_desc"/>
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -63,13 +64,15 @@
                     android:gravity="center"
                     android:orientation="vertical"
                     android:foreground="?android:attr/selectableItemBackground"
-                    android:clickable="true">
+                    android:clickable="true"
+                    android:focusable="true">
 
                     <ImageView
                         android:layout_width="@dimen/crests_height_width"
                         android:layout_height="@dimen/crests_height_width"
                         android:layout_margin="@dimen/crests_margin"
-                        android:src="@mipmap/ic_barcelona_crest_foreground" />
+                        android:src="@mipmap/ic_barcelona_crest_foreground"
+                        android:contentDescription="@string/teamB_crest_content_desc"/>
 
                     <TextView
                         android:layout_width="wrap_content"

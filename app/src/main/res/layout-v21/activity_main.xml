@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
-    xmlns:fab="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/main_floating_button"
-        android:layout_width="@dimen/reset_button_width"
-        android:layout_height="@dimen/reset_button_height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="@dimen/spacing_default"
         android:backgroundTint="@color/DarkPastelGreen"
         android:src="@drawable/ic_add_button"
-        card_view:fabSize="mini"/>
+        card_view:fabSize="normal"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -25,11 +24,10 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <android.support.v7.widget.CardView
-                android:id="@+id/scoreboard"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 card_view:cardBackgroundColor="@color/Mirage">
@@ -47,14 +45,13 @@
                         android:orientation="vertical">
 
                         <ImageView
-                            android:id="@+id/crest_a"
                             android:layout_width="@dimen/crests_height_width"
                             android:layout_height="@dimen/crests_height_width"
                             android:layout_margin="@dimen/crests_margin"
-                            android:src="@mipmap/ic_man_untd_crest_foreground" />
+                            android:src="@mipmap/ic_man_untd_crest_foreground"
+                            android:contentDescription="@string/teamA_crest_content_desc"/>
 
                         <TextView
-                            android:id="@+id/team_a_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/team_a_name"
@@ -109,10 +106,10 @@
                             android:layout_width="@dimen/crests_height_width"
                             android:layout_height="@dimen/crests_height_width"
                             android:layout_margin="@dimen/crests_margin"
-                            android:src="@mipmap/ic_barcelona_crest_foreground" />
+                            android:src="@mipmap/ic_barcelona_crest_foreground"
+                            android:contentDescription="@string/teamB_crest_content_desc"/>
 
                         <TextView
-                            android:id="@+id/team_b_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="@string/team_b_name"
@@ -129,30 +126,31 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="@dimen/highlights_spacing_2x">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Highlights"
+                    android:text="@string/highlights_title"
                     android:textColor="@color/Daintree"
-                    android:layout_alignStart="@id/highlghts_card"
-                    android:layout_marginLeft="10dp"/>
+                    android:layout_alignStart="@id/highlights_card"
+                    android:layout_marginStart="@dimen/highlights_spacing_1x"/>
                 <android.support.v7.widget.CardView
-                    android:id="@+id/highlghts_card"
+                    android:id="@+id/highlights_card"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     card_view:cardBackgroundColor="@color/Alabaster"
-                    android:layout_marginTop="20dp"
-                    android:padding="10dp">
+                    android:layout_marginTop="@dimen/highlights_spacing_2x"
+                    android:padding="@dimen/highlights_spacing_1x">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:baselineAligned="false">
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="@dimen/spacing_null"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
@@ -164,13 +162,13 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:fontFamily="sans-serif-light"
-                                android:textColor="@color/scoreKeeperBlack"
+                                android:textColor="@color/Mirage"
                                 android:textSize="@dimen/text_size_medium"
                                 android:textAlignment="viewStart"/>
                         </LinearLayout>
 
                         <LinearLayout
-                            android:layout_width="0dp"
+                            android:layout_width="@dimen/spacing_null"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:gravity="center"
@@ -182,7 +180,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:fontFamily="sans-serif-light"
-                                android:textColor="@color/scoreKeeperBlack"
+                                android:textColor="@color/Mirage"
                                 android:textSize="@dimen/text_size_medium"
                                 android:textAlignment="viewEnd"/>
                         </LinearLayout>
@@ -195,162 +193,160 @@
 
         </LinearLayout>
     </ScrollView>
-
     <LinearLayout
-        android:id="@+id/resetLayout"
+        android:id="@+id/secondary_fabs_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom|center"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="100dp"
-        android:layout_marginRight="56dp"
-        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/secondary_fab_group_bottom_margin"
+        android:layout_marginEnd="@dimen/secondary_fab_group_end_margin"
+        android:padding="@dimen/spacing_extra_small"
         android:visibility="invisible">
-
-        <TextView
-            android:id="@+id/reset_button_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:text="Reset"
-            android:textSize="@dimen/text_size_medium"/>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/reset_button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:clickable="true"
-            android:src="@drawable/ic_refresh"
-            android:backgroundTint="@color/LightSlateGrey"/>
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_margin="@dimen/secondary_fab_margins">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset_button_label"
+                android:textSize="@dimen/text_size_medium"
+                android:textAlignment="textEnd"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/spacing_extra_small"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_refresh"
+                android:backgroundTint="@color/LightSlateGrey"
+                card_view:fabSize="mini"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_margin="@dimen/secondary_fab_margins">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/goal_button_label"
+                android:textSize="@dimen/text_size_medium"
+                android:textAlignment="textEnd"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/spacing_extra_small"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/goal_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@mipmap/ic_goal_button_foreground"
+                android:backgroundTint="@color/LightSlateGrey"
+                card_view:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_margin="@dimen/secondary_fab_margins">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_medium"
+                android:text="@string/yellowCard_button_label"
+                android:textAlignment="textEnd"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/spacing_extra_small"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/yellow_card_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@mipmap/ic_yellow_card_button_foreground"
+                android:backgroundTint="@color/LightSlateGrey"
+                card_view:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_margin="@dimen/secondary_fab_margins">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_medium"
+                android:text="@string/redCard_button_label"
+                android:textAlignment="textEnd"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/spacing_extra_small"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/red_card_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@mipmap/ic_red_card_button_foreground"
+                android:backgroundTint="@color/LightSlateGrey"
+                card_view:fabSize="mini"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_margin="@dimen/secondary_fab_margins">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="@dimen/text_size_medium"
+                android:text="@string/corner_button_label"
+                android:textAlignment="textEnd"
+                android:layout_gravity="center"
+                android:layout_marginEnd="@dimen/spacing_extra_small"/>
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/corner_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@mipmap/ic_corner_button_foreground"
+                android:backgroundTint="@color/LightSlateGrey"
+                card_view:fabSize="mini"/>
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/goalLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="160dp"
-        android:layout_marginRight="85dp"
-        android:orientation="horizontal"
-        android:visibility="invisible">
-
-        <TextView
-            android:id="@+id/goal_button_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:text="Goal"
-            android:textSize="@dimen/text_size_medium"/>
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/goal_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:src="@mipmap/ic_goal_button_foreground"
-            android:backgroundTint="@color/LightSlateGrey"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/yellowCardLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="220dp"
-        android:layout_marginRight="110dp"
-        android:orientation="horizontal"
-        android:visibility="invisible">
-
-        <TextView
-            android:id="@+id/yellow_card_button_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_size_medium"
-            android:text="Yellow Card" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/yellow_card_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:src="@mipmap/ic_yellow_card_button_foreground"
-            android:backgroundTint="@color/LightSlateGrey"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/redCardLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="280dp"
-        android:layout_marginRight="90dp"
-        android:orientation="horizontal"
-        android:visibility="invisible">
-
-        <TextView
-            android:id="@+id/red_card_button_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_size_medium"
-            android:text="Red Card" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/red_card_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:src="@mipmap/ic_red_card_button_foreground"
-            android:backgroundTint="@color/LightSlateGrey"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/cornerLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="340dp"
-        android:layout_marginRight="70dp"
-        android:orientation="horizontal"
-        android:visibility="invisible">
-
-        <TextView
-            android:id="@+id/corner_button_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:layout_marginTop="5dp"
-            android:layout_weight="1"
-            android:textSize="@dimen/text_size_medium"
-            android:text="Corner" />
-
-        <android.support.design.widget.FloatingActionButton
-            android:id="@+id/corner_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:clickable="true"
-            android:src="@mipmap/ic_corner_button_foreground"
-            android:backgroundTint="@color/LightSlateGrey"/>
-    </LinearLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

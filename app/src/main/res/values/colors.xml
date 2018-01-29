@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="scoreKeeperDarkGrey">#616161</color>
-    <color name="scoreKeeperBlack">#000000</color>
     <color name="Mirage">#0F1E2A</color>
     <color name="LightSlateGrey">#7E8C98</color>
     <color name="Alabaster">#FBFCFC</color>

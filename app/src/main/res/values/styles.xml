@@ -4,6 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Background color of buttons in the app -->
         <item name="colorButtonNormal">#00B33A</item>
+        <item name="colorPrimary">#8BC34A</item>
+        <item name="colorPrimaryDark">@color/Daintree</item>
+        <item name="colorAccent">#009688</item>
     </style>
 
 </resources>
