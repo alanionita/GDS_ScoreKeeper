@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        FloatingActionButton mainFab = (FloatingActionButton) findViewById(R.id.main_floating_button);
+        final FloatingActionButton mainFab = (FloatingActionButton) findViewById(R.id.main_floating_button);
         final FloatingActionButton resetFab = (FloatingActionButton) findViewById(R.id.reset_button);
         final FloatingActionButton goalFab = (FloatingActionButton) findViewById(R.id.goal_button);
         final FloatingActionButton yellowCardFab = (FloatingActionButton) findViewById(R.id.yellow_card_button);
@@ -69,6 +69,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 resetFab.bringToFront();
                 resetScore(view);
+
+                resetLayout.setVisibility(View.GONE);
+                goalLayout.setVisibility(View.GONE);
+                yellowCardLayout.setVisibility(View.GONE);
+                redCardLayout.setVisibility(View.GONE);
+                cornerLayout.setVisibility(View.GONE);
             }
         });
 
@@ -78,33 +84,57 @@ public class MainActivity extends AppCompatActivity {
                 goalFab.bringToFront();
                 GoalChooseTeamModal teamModal = new GoalChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
+
+                resetLayout.setVisibility(View.GONE);
+                goalLayout.setVisibility(View.GONE);
+                yellowCardLayout.setVisibility(View.GONE);
+                redCardLayout.setVisibility(View.GONE);
+                cornerLayout.setVisibility(View.GONE);
             }
         });
 
         yellowCardFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goalFab.bringToFront();
+                yellowCardFab.bringToFront();
                 YellowCardChooseTeamModal teamModal = new YellowCardChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
+
+                resetLayout.setVisibility(View.GONE);
+                goalLayout.setVisibility(View.GONE);
+                yellowCardLayout.setVisibility(View.GONE);
+                redCardLayout.setVisibility(View.GONE);
+                cornerLayout.setVisibility(View.GONE);
             }
         });
 
         redCardFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goalFab.bringToFront();
+                redCardFab.bringToFront();
                 RedCardChooseTeamModal teamModal = new RedCardChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
+
+                resetLayout.setVisibility(View.GONE);
+                goalLayout.setVisibility(View.GONE);
+                yellowCardLayout.setVisibility(View.GONE);
+                redCardLayout.setVisibility(View.GONE);
+                cornerLayout.setVisibility(View.GONE);
             }
         });
 
         cornerFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goalFab.bringToFront();
+                cornerFab.bringToFront();
                 CornerChooseTeamModal teamModal = new CornerChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
+
+                resetLayout.setVisibility(View.GONE);
+                goalLayout.setVisibility(View.GONE);
+                yellowCardLayout.setVisibility(View.GONE);
+                redCardLayout.setVisibility(View.GONE);
+                cornerLayout.setVisibility(View.GONE);
             }
         });
 

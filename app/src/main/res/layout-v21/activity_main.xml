@@ -13,8 +13,9 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="bottom|center"
         android:layout_marginBottom="@dimen/spacing_default"
-        android:backgroundTint="@color/scoreKeeperDarkGrey"
-        android:src="@drawable/ic_add_button" />
+        android:backgroundTint="@color/DarkPastelGreen"
+        android:src="@drawable/ic_add_button"
+        card_view:fabSize="mini"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -183,7 +184,7 @@
         android:layout_marginBottom="100dp"
         android:layout_marginRight="56dp"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/reset_button_label"
@@ -200,7 +201,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@drawable/ic_refresh_black_24dp" />
+            android:src="@drawable/ic_refresh"
+            android:backgroundTint="@color/LightSlateGrey"/>
 
     </LinearLayout>
 
@@ -214,7 +216,7 @@
         android:layout_marginBottom="160dp"
         android:layout_marginRight="85dp"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/goal_button_label"
@@ -231,7 +233,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@mipmap/ic_goal_button_foreground" />
+            android:src="@mipmap/ic_goal_button_foreground"
+            android:backgroundTint="@color/LightSlateGrey"/>
     </LinearLayout>
 
     <LinearLayout
@@ -244,7 +247,7 @@
         android:layout_marginBottom="220dp"
         android:layout_marginRight="110dp"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/yellow_card_button_label"
@@ -261,7 +264,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@mipmap/ic_yellow_card_button_foreground" />
+            android:src="@mipmap/ic_yellow_card_button_foreground"
+            android:backgroundTint="@color/LightSlateGrey"/>
     </LinearLayout>
 
     <LinearLayout
@@ -274,7 +278,7 @@
         android:layout_marginBottom="280dp"
         android:layout_marginRight="90dp"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/red_card_button_label"
@@ -291,7 +295,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@mipmap/ic_red_card_button_foreground" />
+            android:src="@mipmap/ic_red_card_button_foreground"
+            android:backgroundTint="@color/LightSlateGrey"/>
     </LinearLayout>
 
     <LinearLayout
@@ -304,7 +309,7 @@
         android:layout_marginBottom="340dp"
         android:layout_marginRight="70dp"
         android:orientation="horizontal"
-        android:visibility="visible">
+        android:visibility="invisible">
 
         <TextView
             android:id="@+id/corner_button_label"
@@ -321,7 +326,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clickable="true"
-            android:src="@mipmap/ic_corner_button_foreground" />
+            android:src="@mipmap/ic_corner_button_foreground"
+            android:backgroundTint="@color/LightSlateGrey"/>
     </LinearLayout>
 
 
