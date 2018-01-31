@@ -34,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
         final FloatingActionButton cornerFab = findViewById(R.id.corner_button);
 
         final LinearLayout secondaryFabsLayout = findViewById(R.id.secondary_fabs_layout);
+        final LinearLayout dimLayout = findViewById(R.id.dim_layout);
 
         final Animation showButton = AnimationUtils.loadAnimation(MainActivity.this, R.anim.show_button);
         final Animation hideButton = AnimationUtils.loadAnimation(MainActivity.this, R.anim.hide_button);
-
+        final Animation showLayout = AnimationUtils.loadAnimation(MainActivity.this, R.anim.show_layout);
+        final Animation hideLayout = AnimationUtils.loadAnimation(MainActivity.this, R.anim.hide_layout);
 
 
         mainFab.setOnClickListener(new View.OnClickListener() {
@@ -45,10 +47,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(secondaryFabsLayout.getVisibility() == View.VISIBLE){
                     secondaryFabsLayout.setVisibility(View.GONE);
+                    dimLayout.setVisibility(View.GONE);
                     mainFab.startAnimation(hideButton);
+                    secondaryFabsLayout.startAnimation(hideLayout);
                 } else {
                     secondaryFabsLayout.setVisibility(View.VISIBLE);
+                    dimLayout.setVisibility(View.VISIBLE);
                     mainFab.startAnimation(showButton);
+                    secondaryFabsLayout.startAnimation(showLayout);
                 }
 
             }
@@ -59,8 +65,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 resetFab.bringToFront();
                 resetScore();
-
                 secondaryFabsLayout.setVisibility(View.GONE);
+                dimLayout.setVisibility(View.GONE);
+                secondaryFabsLayout.startAnimation(hideLayout);
+                mainFab.startAnimation(hideButton);
             }
         });
 
@@ -71,6 +79,9 @@ public class MainActivity extends AppCompatActivity {
                 GoalChooseTeamModal teamModal = new GoalChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
                 secondaryFabsLayout.setVisibility(View.GONE);
+                dimLayout.setVisibility(View.GONE);
+                secondaryFabsLayout.startAnimation(hideLayout);
+                mainFab.startAnimation(hideButton);
             }
         });
 
@@ -81,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
                 YellowCardChooseTeamModal teamModal = new YellowCardChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
                 secondaryFabsLayout.setVisibility(View.GONE);
+                dimLayout.setVisibility(View.GONE);
+                secondaryFabsLayout.startAnimation(hideLayout);
+                mainFab.startAnimation(hideButton);
             }
         });
 
@@ -91,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
                 RedCardChooseTeamModal teamModal = new RedCardChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
                 secondaryFabsLayout.setVisibility(View.GONE);
+                dimLayout.setVisibility(View.GONE);
+                secondaryFabsLayout.startAnimation(hideLayout);
+                mainFab.startAnimation(hideButton);
             }
         });
 
@@ -101,6 +118,9 @@ public class MainActivity extends AppCompatActivity {
                 CornerChooseTeamModal teamModal = new CornerChooseTeamModal();
                 teamModal.show(getFragmentManager(), "dialog");
                 secondaryFabsLayout.setVisibility(View.GONE);
+                dimLayout.setVisibility(View.GONE);
+                secondaryFabsLayout.startAnimation(hideLayout);
+                mainFab.startAnimation(hideButton);
             }
         });
 
