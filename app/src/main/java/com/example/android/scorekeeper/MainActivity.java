@@ -1,9 +1,12 @@
 package com.example.android.scorekeeper;
 
+import android.graphics.drawable.Animatable;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -32,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
 
         final LinearLayout secondaryFabsLayout = findViewById(R.id.secondary_fabs_layout);
 
+        final Animation showButton = AnimationUtils.loadAnimation(MainActivity.this, R.anim.show_button);
+        final Animation hideButton = AnimationUtils.loadAnimation(MainActivity.this, R.anim.hide_button);
+
 
 
         mainFab.setOnClickListener(new View.OnClickListener() {
@@ -39,8 +45,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if(secondaryFabsLayout.getVisibility() == View.VISIBLE){
                     secondaryFabsLayout.setVisibility(View.GONE);
+                    mainFab.startAnimation(hideButton);
                 } else {
                     secondaryFabsLayout.setVisibility(View.VISIBLE);
+                    mainFab.startAnimation(showButton);
                 }
 
             }
