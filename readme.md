@@ -23,7 +23,7 @@ This project is about combining various ideas and skills we’ve been practicing
 * Properly scoping variables
 * Finding views by their ID
 
-### Requierments
+### Requirements
 
 #### Game Chosen
 
