@@ -2,11 +2,11 @@
 
 ## ScoreKeeper
 
-#### Version 1
-![ScoreKeeper v1.0](http://g.recordit.co/eseChLGuG8.gif)
-
-#### Version 2
+#### Version 2.0
 ![ScoreKeeper v2.0](http://g.recordit.co/b5laTZsjyT.gif)
+
+#### Version 1.0
+![ScoreKeeper v1.0](http://g.recordit.co/eseChLGuG8.gif)
 
 ### Project Overview
 
